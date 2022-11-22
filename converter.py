@@ -22,8 +22,9 @@ def comandpush(repo):
     repo.git.commit("-m", "updating files")
     print("succesfully updated")
     repo=Repo(localrepo)
-    origin = repo.remotes.origin
+    origin = repo.remote(name='origin')
     origin.push()
+
 
 directory = 'input'
 
