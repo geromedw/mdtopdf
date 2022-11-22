@@ -19,7 +19,7 @@ destination = 'main'
 
 def comandpush(repo):
     
-    repo.git.add(update=True)
+    repo.git.add(".")
     repo.git.commit("-m", "updating files")
     print("succesfully updated")
     repo=Repo(localrepo,search_parent_directories=True)
