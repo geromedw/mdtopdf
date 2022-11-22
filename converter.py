@@ -4,7 +4,7 @@ os.add_dll_directory(r"C:/Program Files/GTK3-Runtime Win64/bin")
 from md2pdf.core import md2pdf
 from git import Repo
 
-localrepo = os.path.join(os.getcwd(),'python')
+localrepo = os.path.join(os.getcwd(),'')
 destination = 'main'
 
 
@@ -25,7 +25,7 @@ def comandpush(repo):
     print("succesfully updated")
 
 
-directory = 'python\md2pdf\input'
+directory = 'input'
 
 pdffilelist = []
 mdfilelist = []
@@ -44,13 +44,13 @@ for filename in os.listdir(directory):
         md2pdf(pdfname,
               md_content=None,
               md_file_path=mdfile,
-              css_file_path="python\md2pdf\input.css",
+              css_file_path="input.css",
               base_url=None)
        
         pdffilelist.append(pdfname)
     
 
-with open("python/md2pdf/template.html","r",encoding='utf-8') as htmlfile:
+with open("template.html","r",encoding='utf-8') as htmlfile:
     htmldata = (htmlfile.read())
     htmllist = ""
     x = 0
@@ -60,7 +60,7 @@ with open("python/md2pdf/template.html","r",encoding='utf-8') as htmlfile:
     
     htmldata = htmldata.replace("data",htmllist)
 
-    with open("python/md2pdf/index.html","w") as htmloutput:
+    with open("index.html","w") as htmloutput:
         htmloutput.write(htmldata)
 
 repo = Repo(localrepo)
