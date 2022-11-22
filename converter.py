@@ -5,7 +5,7 @@ from md2pdf.core import md2pdf
 from git import Repo
 
 localrepo = os.path.join(os.getcwd(),'')
-print(localrepo)
+print(type(localrepo))
 destination = 'main'
 
 
