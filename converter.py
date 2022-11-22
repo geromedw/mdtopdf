@@ -4,8 +4,8 @@ os.add_dll_directory(r"C:/Program Files/GTK3-Runtime Win64/bin")
 from md2pdf.core import md2pdf
 from git import Repo
 
-localrepo = r"C:\Users\gerom\mdtopdf"
-print(type(localrepo))
+localrepo = os.path.realpath(r"C:\Users\gerom\mdtopdf\mdtopdf\input")
+print(localrepo)
 destination = 'main'
 
 
@@ -22,7 +22,7 @@ def comandpush(repo):
     repo.git.add(update=True)
     repo.git.commit("-m", "updating files")
     print("succesfully updated")
-    repo=Repo(localrepo)
+    repo=Repo(localrepo,search_parent_directories=True)
     origin = repo.remote(name='origin')
     origin.push()
 
@@ -65,7 +65,7 @@ with open("template.html","r",encoding='utf-8') as htmlfile:
     with open("index.html","w") as htmloutput:
         htmloutput.write(htmldata)
 
-repo = Repo(search_parent_directories=True)
+repo = Repo(localrepo,search_parent_directories=True)
 comandpush(repo)
 
 #installeer GTK3-runtime
