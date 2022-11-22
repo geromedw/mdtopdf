@@ -1,0 +1,28 @@
+h1{
+    color: green;
+}
+
+h2{
+    color: red;
+}
+
+h3{
+    color: royalblue;
+}
+
+h4{
+    color: hotpink;
+}
+
+h5{
+    color: yellow;
+}
+
+p{
+    color: slategray;
+    font-style: italic;
+}
+
+li{
+    font-weight: 800;
+}
