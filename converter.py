@@ -4,7 +4,7 @@ os.add_dll_directory(r"C:/Program Files/GTK3-Runtime Win64/bin")
 from md2pdf.core import md2pdf
 from git import Repo
 
-localrepo = os.path.realpath(r"C:\Users\gerom\mdtopdf\mdtopdf\input")
+localrepo = r"C:\Users\gerom\mdtopdf\mdtopdf\input"
 print(localrepo)
 destination = 'main'
 
