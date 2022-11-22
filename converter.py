@@ -55,7 +55,7 @@ with open("template.html","r",encoding='utf-8') as htmlfile:
     htmllist = ""
     x = 0
     for file in mdfilelist:
-         htmllist += f"md file is <a href=\{mdfilelist[x]}> {mdfilelist[x]} </a>" +  "<br>" + f"pdf file is <a href=\{pdffilelist[x]}> {pdffilelist[x]} </a>" "<br>" + "\n" + "<br>"
+         htmllist += f"md file is <a href=https://github.com/geromedw/mdtopdf/{mdfilelist[x]}> {mdfilelist[x]} </a>" +  "<br>" + f"pdf file is <a href=https://github.com/geromedw/mdtopdf/{pdffilelist[x]}> {pdffilelist[x]} </a>" "<br>" + "\n" + "<br>"
          x+=1
     
     htmldata = htmldata.replace("data",htmllist)
