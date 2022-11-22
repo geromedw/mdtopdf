@@ -19,12 +19,11 @@ destination = 'main'
 def comandpush(repo):
     
     repo.git.add(update=True)
+    repo.git.commit("-m", "updating files")
+    print("succesfully updated")
     repo=Repo(localrepo)
     origin = repo.remotes.origin
     origin.push()
-    repo.git.commit("-m", "updating files")
-    print("succesfully updated")
-
 
 directory = 'input'
 
