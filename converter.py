@@ -17,11 +17,11 @@ destination = 'main'
         Repo.clone_from("https://github.com/geromedw/python.git",localrepo, branch=destination) """
 
 def comandpush(repo):
-    repo.git.add(update=True)
-    repo.git.commit("-m", "updating files")
     repo=Repo(localrepo)
     origin = repo.remotes.origin
     origin.push()
+    repo.git.add(update=True)
+    repo.git.commit("-m", "updating files")
     print("succesfully updated")
 
 
